@@ -13,7 +13,7 @@ export default async function Index() {
           <div id="welcome">
             <h1>
               <span> Hello there, </span>
-              Welcome ads-app 👋
+              Welcome campaign-manager-app 👋
             </h1>
           </div>
 

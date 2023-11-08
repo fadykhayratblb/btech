@@ -1,7 +1,7 @@
 {
-  "name": "ads-app",
+  "name": "campaign-manager-app",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/ads-app",
+  "sourceRoot": "apps/campaign-manager-app",
   "projectType": "application",
   "targets": {
     "build": {
@@ -9,11 +9,11 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/apps/ads-app"
+        "outputPath": "dist/apps/campaign-manager-app"
       },
       "configurations": {
         "development": {
-          "outputPath": "apps/ads-app"
+          "outputPath": "apps/campaign-manager-app"
         },
         "production": {}
       }
@@ -22,16 +22,16 @@
       "executor": "@nx/next:server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "ads-app:build",
+        "buildTarget": "campaign-manager-app:build",
         "dev": true
       },
       "configurations": {
         "development": {
-          "buildTarget": "ads-app:build:development",
+          "buildTarget": "campaign-manager-app:build:development",
           "dev": true
         },
         "production": {
-          "buildTarget": "ads-app:build:production",
+          "buildTarget": "campaign-manager-app:build:production",
           "dev": false
         }
       }
@@ -39,14 +39,14 @@
     "export": {
       "executor": "@nx/next:export",
       "options": {
-        "buildTarget": "ads-app:build:production"
+        "buildTarget": "campaign-manager-app:build:production"
       }
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/ads-app/jest.config.ts",
+        "jestConfig": "apps/campaign-manager-app/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {
@@ -60,7 +60,7 @@
       "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/ads-app/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["apps/campaign-manager-app/**/*.{ts,tsx,js,jsx}"]
       }
     }
   },
